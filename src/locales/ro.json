@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "motivation": "Aici ar trebui să fie textul motivațional. Aici ar trebui să fie linia \"vom schimba lumea\". Lăsăm motivația falsă visătorilor. Noi, în schimb, acționăm.",
+    "title": {
+      "line1": "O Comunitate.",
+      "line2": "O Misiune.",
+      "line3": "Bani Mai Inteligenti pentru Toți."
+    },
+    "cta": {
+      "button": "Înregistrează-te astăzi",
+      "subtext": "Obține acces timpuriu + beneficii exclusive ca membru al grupului focus."
+    }
+  },
+  "form": {
+    "email": "Adresa de Email",
+    "emailPlaceholder": "tu@exemplu.com",
+    "name": "Nume și Prenume",
+    "namePlaceholder": "Ion Popescu",
+    "marketing": "Sunt de acord să primesc actualizări de marketing și știri despre accesul timpuriu",
+    "focus": "Sunt de acord să particip în grupul focus și să testez produsul",
+    "submit": "Alătură-te Mișcării",
+    "submitting": "Se trimite…"
+  },
+  "features": {
+    "clarity": {
+      "title": "Fără Mai Multe Presupuneri",
+      "description": "Urmărește-ți banii cu ușurință, fără foi de calcul."
+    },
+    "control": {
+      "title": "Regulile Tale, Banii Tăi",
+      "description": "Stabilește obiective, împarte facturile și rămâi la curent cu finanțele tale."
+    },
+    "community": {
+      "title": "Fii Parte din Schimbare",
+      "description": "Feedback-ul tău construiește aplicația de bani mai inteligentă pentru toată lumea."
+    }
+  },
+  "footer": {
+    "copyright": "© FinFlow | Toate drepturile rezervate",
+    "privacy": "Politica de Confidențialitate",
+    "terms": "Termeni și Condiții"
+  },
+  "messages": {
+    "success": "Mulțumim! Ești pe listă. Vom fi în contact în curând.",
+    "error": "Ceva nu a mers bine. Te rugăm să încerci din nou."
+  }
+}

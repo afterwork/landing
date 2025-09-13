@@ -1,95 +1,115 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import styles from './page.module.scss';
+import { SubscribeForm } from '@/components/SubscribeForm';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const { t } = useTranslation();
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  return (
+    <main className={styles.landing}>
+      <LanguageSwitcher />
+
+      <section aria-label="Hero" className={styles.hero}>
+        <motion.div
+          className={styles.heroBackdrop}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: 'easeOut' }}
+        />
+        <div className={styles.heroInner}>
+          <motion.p
+            className={styles.motivationTop}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
+            {t('hero.motivation')}
+          </motion.p>
+          <motion.h1
+            className={styles.title}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Read our docs
-          </a>
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              {t('hero.title.line1')}
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              {t('hero.title.line2')}
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+            >
+              {t('hero.title.line3')}
+            </motion.span>
+          </motion.h1>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+
+      <section aria-label="Features" className={styles.features}>
+        <motion.div
+          className={styles.feature}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <h3>{t('features.clarity.title')}</h3>
+          <p>{t('features.clarity.description')}</p>
+        </motion.div>
+        <motion.div
+          className={styles.feature}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <h3>{t('features.control.title')}</h3>
+          <p>{t('features.control.description')}</p>
+        </motion.div>
+        <motion.div
+          className={styles.feature}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <h3>{t('features.community.title')}</h3>
+          <p>{t('features.community.description')}</p>
+        </motion.div>
+      </section>
+      <section id="signup" aria-label="Signup" className={styles.signup}>
+        <SubscribeForm />
+      </section>
+
+      <motion.footer
+        className={styles.footer}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <p>{t('footer.copyright')}</p>
+        <nav aria-label="Legal">
+          <a href="#privacy">{t('footer.privacy')}</a>
+          <span aria-hidden="true">|</span>
+          <a href="#terms">{t('footer.terms')}</a>
+        </nav>
+      </motion.footer>
+    </main>
   );
 }

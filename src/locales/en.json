@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "motivation": "Here should be the motivational text. Here should be the \"we will change the world\" line. We leave the motivational bullshit to dreamers. We, instead, take action.",
+    "title": {
+      "line1": "One Community.",
+      "line2": "One Mission.",
+      "line3": "Smarter Money for All."
+    },
+    "cta": {
+      "button": "Sign up today",
+      "subtext": "Get early access + exclusive perks as a focus group member."
+    }
+  },
+  "form": {
+    "email": "Email Address",
+    "emailPlaceholder": "you@example.com",
+    "name": "Name and Surname",
+    "namePlaceholder": "Jane Doe",
+    "marketing": "I agree to receive marketing updates and early access news",
+    "focus": "I agree to participate in the focus group and test the product",
+    "submit": "Join the Movement",
+    "submitting": "Submitting…"
+  },
+  "features": {
+    "clarity": {
+      "title": "No More Guesswork",
+      "description": "Track your money with ease, no spreadsheets required."
+    },
+    "control": {
+      "title": "Your Rules, Your Money",
+      "description": "Set goals, split bills, and stay on top of your finances."
+    },
+    "community": {
+      "title": "Be Part of the Change",
+      "description": "Your feedback builds the smarter money app for everyone."
+    }
+  },
+  "footer": {
+    "copyright": "© FinFlow | All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "messages": {
+    "success": "Thanks! You are on the list. We will be in touch soon.",
+    "error": "Something went wrong. Please try again."
+  }
+}
