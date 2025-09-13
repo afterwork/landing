@@ -41,7 +41,13 @@
     "terms": "Termeni și Condiții"
   },
   "messages": {
-    "success": "Mulțumim! Ești pe listă. Vom fi în contact în curând.",
+    "success": "Mulțumim! Ești pe listă.",
     "error": "Ceva nu a mers bine. Te rugăm să încerci din nou."
+  },
+  "validation": {
+    "emailRequired": "Adresa de email este obligatorie",
+    "emailInvalid": "Te rugăm să introduci o adresă de email validă",
+    "nameRequired": "Numele este obligatoriu",
+    "nameMinLength": "Numele trebuie să aibă cel puțin 2 caractere"
   }
 }

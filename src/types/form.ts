@@ -1,10 +1,8 @@
 export type SubscribePayload = {
   email: string;
-  name?: string;
-  comment?: string;
-  consent: boolean;
-  /** Honeypot field - must be empty */
-  company?: string;
+  name: string;
+  marketing: boolean;
+  focus: boolean;
 };
 
 export type ApiResponse = {

@@ -41,7 +41,13 @@
     "terms": "Terms & Conditions"
   },
   "messages": {
-    "success": "Thanks! You are on the list. We will be in touch soon.",
+    "success": "Thanks! You are on the list.",
     "error": "Something went wrong. Please try again."
+  },
+  "validation": {
+    "emailRequired": "Email address is required",
+    "emailInvalid": "Please enter a valid email address",
+    "nameRequired": "Name is required",
+    "nameMinLength": "Name must be at least 2 characters"
   }
 }

@@ -259,6 +259,13 @@ $accent-2: #22d3ee; // cyan
   cursor: pointer;
 }
 
+.fieldError {
+  color: #ff9aa2;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
 .error {
   color: #ff9aa2;
   font-size: 14px;
