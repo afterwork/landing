@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
 import styles from './LanguageSwitcher.module.scss';
 
 export function LanguageSwitcher() {
@@ -10,6 +9,8 @@ export function LanguageSwitcher() {
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
   };
+
+  console.log(i18n.language);
 
   return (
     <div className={styles.switcher}>
