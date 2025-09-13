@@ -12,7 +12,6 @@ type FormData = {
   name: string;
   marketing: boolean;
   focus: boolean;
-  company: string; // honeypot
 };
 
 export function SubscribeForm() {
@@ -34,16 +33,10 @@ export function SubscribeForm() {
       name: '',
       marketing: false,
       focus: false,
-      company: '',
     },
   });
 
   const onSubmit = async (data: FormData) => {
-    if (data.company) {
-      // Honeypot caught a bot
-      return;
-    }
-
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: '' });
 
@@ -139,17 +132,6 @@ export function SubscribeForm() {
           <span className={styles.fieldError}>{errors.name.message}</span>
         )}
       </motion.div>
-
-      {/* Honeypot */}
-      <div className={styles.honeypot} aria-hidden="true">
-        <label htmlFor="company">Company</label>
-        <input
-          id="company"
-          type="text"
-          tabIndex={-1}
-          {...register('company')}
-        />
-      </div>
 
       <motion.div
         className={styles.checkRow}
