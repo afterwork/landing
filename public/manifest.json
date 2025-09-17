@@ -1,0 +1,14 @@
+{
+  "name": "FinFlow - Smarter Money for All",
+  "short_name": "FinFlow",
+  "description": "One Community. One Mission. Smarter Money for All.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f15",
+  "theme_color": "#8b5cf6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["finance", "productivity", "utilities"]
+}
+

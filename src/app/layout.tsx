@@ -11,13 +11,15 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'FinFlow — Budget Smarter, Spend Wiser',
+  title: 'FinFlow — Smarter Money for All',
   description:
-    'FinFlow helps you track spending, build budgets, scan receipts, and plan with calm confidence.',
+    'One Community. One Mission. Smarter Money for All. Join the movement for better financial management.',
+  manifest: '/manifest.json',
+  themeColor: '#8b5cf6',
   openGraph: {
-    title: 'FinFlow — Budget Smarter, Spend Wiser',
+    title: 'FinFlow — Smarter Money for All',
     description:
-      'FinFlow helps you track spending, build budgets, scan receipts, and plan with calm confidence.',
+      'One Community. One Mission. Smarter Money for All. Join the movement for better financial management.',
     url: 'https://finflow.example.com/',
     siteName: 'FinFlow',
     images: [
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'FinFlow — Budget Smarter, Spend Wiser',
+        alt: 'FinFlow — Smarter Money for All',
       },
     ],
     type: 'website',
