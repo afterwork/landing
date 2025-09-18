@@ -60,6 +60,10 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="signup" aria-label="Signup" className={styles.signup}>
+        <SubscribeForm />
+      </section>
+
       <section aria-label="Features" className={styles.features}>
         <motion.div
           className={styles.feature}
@@ -91,9 +95,6 @@ export default function Home() {
           <h3>{t('features.community.title')}</h3>
           <p>{t('features.community.description')}</p>
         </motion.div>
-      </section>
-      <section id="signup" aria-label="Signup" className={styles.signup}>
-        <SubscribeForm />
       </section>
 
       <motion.footer
