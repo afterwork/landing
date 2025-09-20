@@ -4,7 +4,9 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { EMAIL_REGEX } from '@/types/form';
+import { SuccessModal } from './SuccessModal';
 import styles from '@/app/page.module.scss';
 
 type FormData = {
@@ -21,18 +23,18 @@ export function SubscribeForm() {
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm<FormData>({
     defaultValues: {
       email: '',
       name: '',
-      marketing: false,
-      focus: false,
+      marketing: true,
+      focus: true,
     },
   });
 
@@ -56,7 +58,8 @@ export function SubscribeForm() {
           type: 'success',
           message: t('messages.success'),
         });
-        reset();
+        setShowSuccessModal(true);
+        // Не сбрасываем форму, оставляем данные
       } else {
         setSubmitStatus({
           type: 'error',
@@ -140,12 +143,12 @@ export function SubscribeForm() {
         transition={{ duration: 0.5, delay: 0.6 }}
       >
         <label className={styles.checkbox}>
-          <input type="checkbox" {...register('marketing')} />
+          <input type="checkbox" {...register('marketing')} defaultChecked />
           <span> {t('form.marketing')}</span>
         </label>
 
         <label className={styles.checkbox}>
-          <input type="checkbox" {...register('focus')} />
+          <input type="checkbox" {...register('focus')} defaultChecked />
           <span> {t('form.focus')}</span>
         </label>
       </motion.div>
@@ -185,6 +188,15 @@ export function SubscribeForm() {
           {submitStatus.message}
         </motion.p>
       )}
+
+      {typeof window !== 'undefined' &&
+        createPortal(
+          <SuccessModal
+            isOpen={showSuccessModal}
+            onCloseAction={() => setShowSuccessModal(false)}
+          />,
+          document.body
+        )}
     </motion.form>
   );
 }

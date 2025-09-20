@@ -42,12 +42,19 @@
   },
   "messages": {
     "success": "Thanks! You are on the list.",
-    "error": "Something went wrong. Please try again."
+    "error": "Something went wrong. Please try again.",
+    "modal": {
+      "title": "Thank you for being with us!",
+      "message": "We'll be making cool things together soon"
+    }
   },
   "validation": {
     "emailRequired": "Email address is required",
     "emailInvalid": "Please enter a valid email address",
     "nameRequired": "Name is required",
     "nameMinLength": "Name must be at least 2 characters"
+  },
+  "common": {
+    "close": "Close"
   }
 }

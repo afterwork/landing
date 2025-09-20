@@ -42,12 +42,19 @@
   },
   "messages": {
     "success": "Mulțumim! Ești pe listă.",
-    "error": "Ceva nu a mers bine. Te rugăm să încerci din nou."
+    "error": "Ceva nu a mers bine. Te rugăm să încerci din nou.",
+    "modal": {
+      "title": "Mulțumim că ești cu noi!",
+      "message": "Vom face lucruri mișto împreună în curând"
+    }
   },
   "validation": {
     "emailRequired": "Adresa de email este obligatorie",
     "emailInvalid": "Te rugăm să introduci o adresă de email validă",
     "nameRequired": "Numele este obligatoriu",
     "nameMinLength": "Numele trebuie să aibă cel puțin 2 caractere"
+  },
+  "common": {
+    "close": "Închide"
   }
 }
