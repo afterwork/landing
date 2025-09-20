@@ -36,9 +36,7 @@
     }
   },
   "footer": {
-    "copyright": "© FinFlow | All rights reserved",
-    "privacy": "Privacy Policy",
-    "terms": "Terms & Conditions"
+    "copyright": "© FinFlow | All rights reserved"
   },
   "messages": {
     "success": "Thanks! You are on the list.",

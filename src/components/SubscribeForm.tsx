@@ -28,6 +28,7 @@ export function SubscribeForm() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
@@ -59,6 +60,7 @@ export function SubscribeForm() {
           message: t('messages.success'),
         });
         setShowSuccessModal(true);
+        reset();
         // Не сбрасываем форму, оставляем данные
       } else {
         setSubmitStatus({

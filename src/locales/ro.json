@@ -36,9 +36,7 @@
     }
   },
   "footer": {
-    "copyright": "© FinFlow | Toate drepturile rezervate",
-    "privacy": "Politica de Confidențialitate",
-    "terms": "Termeni și Condiții"
+    "copyright": "© FinFlow | Toate drepturile rezervate"
   },
   "messages": {
     "success": "Mulțumim! Ești pe listă.",

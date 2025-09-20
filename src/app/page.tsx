@@ -105,11 +105,6 @@ export default function Home() {
         viewport={{ once: true }}
       >
         <p>{t('footer.copyright')}</p>
-        <nav aria-label="Legal">
-          <a href="#privacy">{t('footer.privacy')}</a>
-          <span aria-hidden="true">|</span>
-          <a href="#terms">{t('footer.terms')}</a>
-        </nav>
       </motion.footer>
     </main>
   );
